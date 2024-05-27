@@ -1,5 +1,4 @@
-import React from "react";
-import BarChart from "./BarChart";
+import MoneyInsightsChart from "./MoneyInsightsChart";
 
 function MoneyInsights() {
   return (
@@ -9,7 +8,7 @@ function MoneyInsights() {
         <button className="bg-[#E6F1EF] py-3 px-5 rounded-2xl">View Report</button>
       </div>
       <p className="w-fit">Cash coming in and going out of your business</p>
-      <BarChart />
+      <MoneyInsightsChart />
     </div>
   );
 }

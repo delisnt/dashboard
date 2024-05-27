@@ -1,5 +1,4 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import React from "react";
 
 function Container({ icon, iconBgColor, trend, trendIcon, title, amount }) {
   return (
