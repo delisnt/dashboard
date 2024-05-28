@@ -11,9 +11,10 @@ function Sidebar() {
           <Icon icon="hugeicons:sidebar-left" />
         </button>
       </div>
-      <button className="p-5 gap-5 bg-sidebar-btn rounded-xl flex items-center">
+      <button className="p-5 gap-3 bg-sidebar-btn rounded-xl flex items-center">
         <Icon icon="gridicons:house" />
         CoinCraft Company
+        <Icon icon="mingcute:down-line" />
       </button>
       <ul className="list-none w-max gap-5 flex flex-col mt-5 text-sidebar-list">
         {sidebarData.map((item, index) => (

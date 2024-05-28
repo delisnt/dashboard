@@ -4,6 +4,8 @@ import "./index.css";
 import StatsCard from "./components/StatsCard";
 import MoneyInsights from "./components/MoneyInsights";
 import Report from "./components/Report";
+import RecentInvoices from "./components/RecentInvoices";
+import ExpenseAnalysis from "./components/ExpenseAnalysis";
 function App() {
   return (
     <div className="flex gap-20 bg-[#F0F7F6] h-fit">
@@ -21,7 +23,13 @@ function App() {
           <StatsCard />
           <MoneyInsights />
         </div>
-        <Report />
+        <div className="flex gap-5">
+          <div className="flex gap-5 flex-wrap flex-col w-fit">
+            <Report />
+            <ExpenseAnalysis />
+          </div>
+          <RecentInvoices/>
+        </div>
       </div>
     </div>
   );

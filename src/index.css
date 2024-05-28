@@ -8,23 +8,10 @@
   padding: 0;
 }
 
-.sidebar-left-nav {
-  -webkit-transform: translate3d(-100%, 0px, 0px);
-  transform: translate3d(-100%, 0px, 0px);
-  visibility: visible;
-  transition: all 0.5s ease 0s;
-  -webkit-transition: all 0.5s ease 0s;
-}
-.closed.sidebar-left-nav {
-  -webkit-transform: translate3d(0px, 0px, 0px);
-  transform: translate3d(0px, 0px, 0px);
-  visibility: visible;
-}
-
-.sidebar-left-nav {
-  transition: transform 0.3s ease;
-}
-
-.sidebar-left-nav.closed {
-  transform: translateX(-100%);
+.custom-dotted-border {
+  border: 0;
+  border-bottom: 2px dotted transparent;
+  background: linear-gradient(to right, black 50%, transparent 0%);
+  background-size: 10px 3px; /* Adjust the size to change the spacing */
+  background-repeat: repeat-x;
 }

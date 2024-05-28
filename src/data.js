@@ -231,23 +231,29 @@ export const reportChartOptions = {
         weight: "bold",
         size: 14,
       },
-      formatter: (value, context) => {
-        return value === maxValue ? value : ''; // Show label only for the highest bar
+      formatter: (value) => {
+        return value === maxValue ? value : ""; // Show label only for the highest bar
       },
       display: (context) => {
         return context.dataset.data[context.dataIndex] === maxValue;
       },
       backgroundColor: (context) => {
-        return context.dataset.data[context.dataIndex] === maxValue ? '#059669' : 'transparent';
+        return context.dataset.data[context.dataIndex] === maxValue
+          ? "#059669"
+          : "transparent";
       },
       borderRadius: (context) => {
         return context.dataset.data[context.dataIndex] === maxValue ? 10 : 0;
       },
       color: (context) => {
-        return context.dataset.data[context.dataIndex] === maxValue ? 'white' : 'transparent';
+        return context.dataset.data[context.dataIndex] === maxValue
+          ? "white"
+          : "transparent";
       },
       padding: (context) => {
-        return context.dataset.data[context.dataIndex] === maxValue ? { top: 6, right: 20, bottom: 6, left: 20 } : { top: 0, right: 0, bottom: 0, left: 0 };
+        return context.dataset.data[context.dataIndex] === maxValue
+          ? { top: 6, right: 20, bottom: 6, left: 20 }
+          : { top: 0, right: 0, bottom: 0, left: 0 };
       },
     },
   },
@@ -260,6 +266,134 @@ export const reportChartOptions = {
         display: false,
         min: 0,
         max: maxValue + 20,
+      },
+    },
+  },
+};
+
+// Recent invoices data
+
+export const invoiceData = [
+  {
+    status: "Overdue",
+    no: 671829,
+    client: "Emma Tompson",
+    total: 3250,
+    dateCreated: "30-09-2023",
+  },
+  {
+    status: "Paid",
+    no: 893750,
+    client: "Richard Miller",
+    total: 12800,
+    dateCreated: "30-09-2023",
+  },
+  {
+    status: "Overdue",
+    no: 894113,
+    client: "Liam Davis",
+    total: 1300,
+    dateCreated: "30-09-2023",
+  },
+  {
+    status: "Overdue",
+    no: 105226,
+    client: "Robert Brown",
+    total: 4040,
+    dateCreated: "29-09-2023",
+  },
+  {
+    status: "Paid",
+    no: 192803,
+    client: "Noah Williams",
+    total: 850,
+    dateCreated: "29-09-2023",
+  },
+  {
+    status: "Part Paid",
+    no: 553714,
+    client: "Amanda C. Harmon",
+    total: 2150,
+    dateCreated: "29-09-2023",
+  },
+  {
+    status: "Paid",
+    no: 781926,
+    client: "Luna Thomas",
+    total: 315,
+    dateCreated: "29-09-2023",
+  },
+  {
+    status: "Paid",
+    no: 542809,
+    client: "Maxwell Kim",
+    total: 470,
+    dateCreated: "29-09-2023",
+  },
+  {
+    status: "Overdue",
+    no: 105623,
+    client: "Keith Watson",
+    total: 5780,
+    dateCreated: "30-09-2023",
+  },
+  {
+    status: "Paid",
+    no: 302871,
+    client: "Anna Bell",
+    total: 1450,
+    dateCreated: "01-12-2023",
+  },
+  {
+    status: "Overdue",
+    no: 512903,
+    client: "John Doe",
+    total: 6200,
+    dateCreated: "15-11-2023",
+  },
+];
+
+// Expense Analysis Data
+
+const expensesAnalysis = [
+  { category: "Payroll", value: 50 },
+  { category: "Marketing", value: 15 },
+];
+
+export const expensesAnalysisData = {
+  labels: expensesAnalysis.map((item) => item.category),
+  datasets: [
+    {
+      data: expensesAnalysis.map((item) => item.value),
+      backgroundColor: ["#05352A", "#CBDA87"],
+      hoverBackgroundColor: ["#05352A", "#CBDA87"],
+    },
+  ],
+};
+
+export const expensesAnalysisOptions = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: "right",
+      labels: {
+        usePointStyle: true,
+        display: false,
+        generateLabels: (chart) => {
+          const data = chart.data;
+          if (data.labels.length && data.datasets.length) {
+            return data.labels.map((label, i) => {
+              const value = data.datasets[0].data[i];
+              return {
+                text: `${label}: ${value}`,
+                fillStyle: data.datasets[0].backgroundColor[i],
+                hidden: false,
+                index: i,
+              };
+            });
+          }
+          return [];
+        },
       },
     },
   },

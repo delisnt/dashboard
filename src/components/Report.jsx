@@ -3,7 +3,7 @@ import ReportChart from "./ReportChart";
 
 function Report() {
   return (
-    <div className="bg-white w-1/2 h-max rounded-3xl p-5 flex flex-col">
+    <div className="bg-white h-max w-[620px] rounded-3xl p-5 flex flex-col">
       <div>
         <span className="text-xl">Total Orders</span>
         <div className="flex gap-3 items-center justify-between">
