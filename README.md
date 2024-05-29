@@ -1,4 +1,4 @@
-Creazione di landing page prendendo spunto da <LINK alla pagina>
+Creazione di landing page prendendo spunto da <https://dribbble.com/shots/23648875-Business-Management-Tool-Dashboard>
 
 Tech utilizzate:
 
