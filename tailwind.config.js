@@ -7,6 +7,8 @@ module.exports = {
         "dark-green": "#05372C",
         "sidebar-list": "#B6DBD4",
         "sidebar-btn": "#0F4A3D",
+        "bg-primary": "#02A18A",
+        "btn-color": "#F1F1F1"
       }
     },
   },

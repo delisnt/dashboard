@@ -8,6 +8,8 @@
   padding: 0;
 }
 
+
+
 .custom-dotted-border {
   border: 0;
   border-bottom: 2px dotted transparent;
@@ -15,3 +17,4 @@
   background-size: 10px 3px; /* Adjust the size to change the spacing */
   background-repeat: repeat-x;
 }
+

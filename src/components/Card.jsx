@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 
 function Container({ icon, iconBgColor, trend, trendIcon, title, amount }) {
   return (
-    <div className="rounded-3xl bg-white border-black h-[100px] text-center gap-10 p-5 flex items-center">
+    <div className="rounded-3xl bg-white border-black h-1/4 text-center gap-10 p-5 flex items-center">
       <div className={`p-4 rounded-full ${iconBgColor} flex h-fit`}>
         <Icon icon={icon} fontSize={25} />
       </div>

@@ -1,6 +1,6 @@
 function BankAccountConnect() {
   return (
-    <section className="rounded-2xl gap-3 text-white border w-[250px] h-[450px] flex flex-col justify-center p-5 bg-gradient-to-b from-green-700 to-teal-900">
+    <section className="rounded-2xl gap-3 text-white border lg:w-1/6 w-1/2 h-full flex flex-col justify-center p-5 bg-gradient-to-b from-green-700 to-teal-900">
       <h2 className="mt-5 text-2xl h-fit">
         Connect your bank account or credit card
       </h2>

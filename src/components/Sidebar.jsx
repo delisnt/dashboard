@@ -4,7 +4,7 @@ import SidebarItem from "./SidebarItem";
 
 function Sidebar() {
   return (
-    <div className="bg-dark-green fixed text-white h-screen flex flex-col justify-start content-center p-5 w-70">
+    <div className="bg-dark-green lg:fixed text-white md:h-screen flex flex-col justify-start content-center p-5">
       <div className="w-full flex justify-between items-center mb-5">
         <h2 className="text-lg font-bold">Erudia</h2>
         <button>
