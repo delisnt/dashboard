@@ -21,12 +21,14 @@ ChartJS.register(
   Legend
 );
 
+const chartPlugin = [ChartDataLabels]
+
 function ReportChart() {
 
   return (
     <div className="w-full max-w-lg mx-auto px-4">
       <div className="flex bg-white justify-items-end h-[200px]">
-        <Bar data={reportChartData} options={reportChartOptions} plugins={[ChartDataLabels]} />
+        <Bar data={reportChartData} options={reportChartOptions} plugins={chartPlugin} />
       </div>
     </div>
   );

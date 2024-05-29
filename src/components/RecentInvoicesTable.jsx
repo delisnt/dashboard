@@ -19,10 +19,10 @@ function RecentInvoicesTable() {
             <span
               className={`flex text-white justify-center py-1 px-2 rounded-xl text-center ${
                 invoice.status === "Overdue"
-                  ? "bg-[#EF8484]"
+                  ? "bg-unpaid-color"
                   : invoice.status === "Paid"
-                  ? "bg-[#029C86]"
-                  : "bg-[#6FD35F]"
+                  ? "bg-paid-color"
+                  : "bg-part-paid-color"
               }`}
             >
               {invoice.status}
